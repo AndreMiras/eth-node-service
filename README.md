@@ -16,5 +16,21 @@ Features:
   - Systemd (TODO)
 
 
-## Install & Usage
-TODO
+## Install
+Install/uninstall after cloning and using the [Makefile](Makefile).
+```sh
+git clone https://github.com/AndreMiras/eth-node-service.git
+make install
+```
+
+## Usage
+Node status and log is then accessed like any services.
+```sh
+systemctl --user status beacon-node
+journalctl -u beacon-node
+```
+In the same way you can start/stop the services.
+```sh
+systemctl --user start beacon-node
+systemctl --user start validator-node
+```
