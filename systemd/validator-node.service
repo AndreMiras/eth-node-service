@@ -1,0 +1,12 @@
+[Unit]
+Description=Ethereum 2.0 Validator Node
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=restart-validator-node.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+
