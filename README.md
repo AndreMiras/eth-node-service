@@ -13,7 +13,7 @@ Features:
   - [Trinity](https://github.com/ethereum/trinity) (TODO)
 - Multiple init daemon support
   - SysVinit (TODO)
-  - Systemd (TODO)
+  - Systemd
 
 
 ## Install
@@ -27,7 +27,7 @@ make install
 Node status and log is then accessed like any services.
 ```sh
 systemctl --user status beacon-node
-journalctl -u beacon-node
+journalctl --user --unit --follow beacon-node
 ```
 In the same way you can start/stop the services.
 ```sh

@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=restart-beacon-node.sh
+ExecStart=%h/.bin/restart-beacon-node.sh
 Restart=on-failure
 
 [Install]

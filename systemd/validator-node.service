@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=restart-validator-node.sh
+ExecStart=%h/.bin/restart-validator-node.sh
 Restart=on-failure
 
 [Install]
