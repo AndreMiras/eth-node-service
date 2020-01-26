@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 
+test -t 1 && USE_TTY="--tty"
 docker pull gcr.io/prysmaticlabs/prysm/beacon-chain:latest
 docker run \
-    --interactive --rm --volume $HOME/prysm:/data \
+    --interactive $USE_TTY --rm --volume $HOME/prysm:/data \
     --publish 4000:4000 --publish 13000:13000 \
     --name beacon-node \
     gcr.io/prysmaticlabs/prysm/beacon-chain:latest \

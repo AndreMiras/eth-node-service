@@ -2,11 +2,12 @@
 
 
 CONFIG=$HOME/.config/prysm/env.sh
+test -t 1 && USE_TTY="--tty"
 test -f $CONFIG && source $CONFIG
 
 docker pull gcr.io/prysmaticlabs/prysm/validator:latest
 docker run \
-    --interactive --rm --volume $HOME/prysm:/data \
+    --interactive $USE_TTY --rm --volume $HOME/prysm:/data \
     --network="host" \
     --name validator-node \
     gcr.io/prysmaticlabs/prysm/validator:latest \

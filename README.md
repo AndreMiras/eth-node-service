@@ -21,6 +21,7 @@ Features:
 Install/uninstall after cloning and using the [Makefile](Makefile).
 ```sh
 git clone https://github.com/AndreMiras/eth-node-service.git
+cd eth-node-service
 make install
 ```
 
