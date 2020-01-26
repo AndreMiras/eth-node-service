@@ -27,7 +27,7 @@ make install
 Node status and log is then accessed like any services.
 ```sh
 systemctl --user status beacon-node
-journalctl --user --unit --follow beacon-node
+journalctl --user --follow --unit beacon-node
 ```
 In the same way you can start/stop the services.
 ```sh
